@@ -1,0 +1,24 @@
+USE [MexiaSource]
+GO
+
+--IF OBJECT_ID('dbo.Area', 'U') IS NOT NULL 
+--	DROP TABLE [dbo].[Area]
+--GO
+
+/****** Object:  Table [dbo].[Area]    Script Date: 2018-01-31 5:51:05 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Area](
+	[AreaID] [smallint] NOT NULL,
+	[AreaName] [nvarchar](255) NOT NULL,
+ CONSTRAINT [PK_Area_AreaID] PRIMARY KEY CLUSTERED 
+(
+	[AreaID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+

@@ -1,0 +1,8 @@
+call mexia_support_tables.bat
+call drop_create_Customer_tables.bat
+call drop_create_Customer_views.bat
+call insert_into_CRM_Customer.bat
+call update_CRM_Customer.bat
+call drop_create_sc_tables.bat
+call drop_create_sc_views.bat
+call insert_into_sc_tables.bat

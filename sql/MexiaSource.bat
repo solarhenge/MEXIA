@@ -1,0 +1,3 @@
+call drop_tables_MexiaSource.bat
+call create_tables_MexiaSource.bat
+call insert_into_MexiaSource.bat

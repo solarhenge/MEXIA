@@ -1,0 +1,32 @@
+USE [MexiaSource]
+GO
+
+IF OBJECT_ID('dbo.ETL', 'U') IS NOT NULL 
+	DROP TABLE [dbo].[ETL]
+GO
+
+/****** Object:  Table [dbo].[ETL]    Script Date: 2018-01-31 7:19:21 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[ETL](
+	[ETLID] [int] IDENTITY(1,1) NOT NULL,
+	[Schema] [sysname] NULL,
+	[Object] [sysname] NULL,
+	[ETL_DATE] [datetime] NULL
+ CONSTRAINT [PK_ETL_ETLID] PRIMARY KEY CLUSTERED 
+(
+	[ETLID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[ETL] ADD CONSTRAINT [UK_ETL_Object] UNIQUE NONCLUSTERED
+    (
+                [Object]
+    )
+GO
+

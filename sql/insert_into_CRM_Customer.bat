@@ -1,0 +1,1 @@
+sqlcmd -S westeros -i C:\Users\jordan\Documents\GitHub\MEXIA\sql\insert_into_CRM_Customer.sql
